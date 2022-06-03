@@ -331,7 +331,7 @@ void espnow_init(void){
         ESP_LOGE(TAG, "Create mutex fail");
     }
 
-    /*create timer for application(non recursive timer)*/
+    /*create timer for application(recursive timer)*/
     espnow_timer = xTimerCreate("ESPNOW timer",pdMS_TO_TICKS(500),pdTRUE,(void*)0,vTimerCallback);
 
 	
